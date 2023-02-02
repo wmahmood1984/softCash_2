@@ -1,10 +1,8 @@
 import React from "react";
-import Banner from "../../components/Banner";
 
 const CreateToken = () => {
   return (
-    <div className="text-[#B3B3B3] grid grid-cols-1 pb-20">
-      <Banner />
+    <div className="text-[#B3B3B3]  pb-20">
       <div className="lg:hidden my-10 text-center">
         <p>This page is only available for desktop view</p>
       </div>
