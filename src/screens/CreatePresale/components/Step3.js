@@ -112,7 +112,7 @@ const Step3 = ({ increaseStep, decreaseStep }) => {
               required
               className="w-full bg-transparent focus:outline-none flex-1 px-4 text-sm focus:ring-0"
               placeholder={
-                "https://www.ratboy.finance/#/launchpads?chain=BSC-Test"
+                "https://www.softcash.finance/#/launchpads?chain=BSC-Test"
               }
             />
           </div>
@@ -194,11 +194,11 @@ const Note = () => (
         upload your image at
       </span>
       <a
-        href=" https://upload.ratboy.finance/"
+        href=" https://upload.softcash.finance/"
         className=" text-primary-400"
         target={"_blank"}
       >
-        https://upload.ratboy.finance/
+        https://upload.softcash.finance/
       </a>
     </p>
   </div>

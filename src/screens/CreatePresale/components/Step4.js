@@ -28,7 +28,7 @@ const Step4 = ({ increaseStep, decreaseStep }) => {
     },
     {
       title: "Listing rate",
-      desc: "ratboy.com/newsales",
+      desc: "softcash.com/newsales",
     },
 
     {
@@ -77,31 +77,31 @@ const Step4 = ({ increaseStep, decreaseStep }) => {
     },
     {
       title: "Website",
-      desc: "ratboy.com/newsales",
+      desc: "softcash.com/newsales",
     },
     {
       title: "Facebook",
-      desc: "ratboy.com/facebook",
+      desc: "softcash.com/facebook",
     },
     {
       title: "Twitter",
-      desc: "ratboy.com/twitter",
+      desc: "softcash.com/twitter",
     },
     {
       title: "Telegram",
-      desc: "ratboy.com/telegram",
+      desc: "softcash.com/telegram",
     },
     {
       title: "Github",
-      desc: "ratboy.com/github",
+      desc: "softcash.com/github",
     },
     {
       title: "Instagram",
-      desc: "ratboy.com/instagram",
+      desc: "softcash.com/instagram",
     },
     {
       title: "Reddit",
-      desc: "ratboy.com/reddit",
+      desc: "softcash.com/reddit",
     },
     {
       title: "Using Team Vesting?",
