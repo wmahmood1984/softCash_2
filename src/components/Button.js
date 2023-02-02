@@ -17,8 +17,8 @@ const Button = ({
     loading || disable
       ? " bg-gray-500 pointer-events-none text-white"
       : color === "secondary"
-      ? "bg-[#F4F4F6] text-black"
-      : " bg-primary text-black"
+      ? "bg-[#F4F4F6] text-white"
+      : " bg-primary-text text-white"
   }  p-2 px-6 ${fullWidth && "w-full"} capitalize  ${
     sm
       ? "text-sm min-h-[36px] min-w-[100px]"

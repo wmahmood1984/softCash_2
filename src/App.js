@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import LaunchPadList from "./screens/LaunchPadList";
 import ProjectPreview from "./screens/ProjectPreview";
 import CreateToken from "./screens/CreateToken";
+import CreatePresale from "./screens/CreatePresale";
 function App() {
   const queryClient = new QueryClient();
   const theme = createTheme({
@@ -31,6 +32,7 @@ function App() {
             <Route element={<LaunchPadList />} path="launchpad_list" />{" "}
             <Route element={<ProjectPreview />} path="project_preview" />
             <Route element={<CreateToken />} path="create_token" />
+            <Route element={<CreatePresale />} path="create_presale" />
           </Routes>
         </Layout>
       </QueryClientProvider>
