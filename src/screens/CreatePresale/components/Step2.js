@@ -20,7 +20,7 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
   const list = ["BNB", "BUSD", "USDT", "USDC"];
   return (
     <div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div className="flex justify-between items-center">
             <p>
@@ -123,7 +123,7 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
         If i spend 1 BNB on how many tokens will i recieve? Usually this amount
         is lower than presale rate to allow for a higher listing price on
       </p>
-      <div className=" grid grid-cols-2 gap-6 mt-4">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
         <div className="">
           <CustomInput
             type="date"

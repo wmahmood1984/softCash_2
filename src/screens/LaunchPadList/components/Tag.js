@@ -26,7 +26,7 @@ const Tag = ({ type, small = false }) => {
     <div
       className={`${
         small && "text-xs"
-      }  rounded-md border border-gray-400 p-1.5 font-semibold`}
+      }  rounded-md border border-gray-400 p-1.5 font-semibold `}
       style={{ color: color }}
     >
       • {text}

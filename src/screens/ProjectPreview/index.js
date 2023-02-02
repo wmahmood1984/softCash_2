@@ -8,11 +8,11 @@ const ProjectPreview = () => {
   return (
     <div className=" text-[#B3B3B3] grid grid-cols-1">
       <Banner />
-      <div className="grid grid-cols-12 gap-6 ">
-        <div className=" col-span-8">
+      <div className="grid lg:grid-cols-12 gap-6 mt-5">
+        <div className=" lg:col-span-8">
           <Left />
         </div>
-        <div className="col-span-4">
+        <div className="lg:col-span-4">
           <Right />
         </div>
       </div>

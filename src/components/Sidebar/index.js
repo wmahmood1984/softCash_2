@@ -16,9 +16,9 @@ const Sidebar = ({ open, setOpen }) => {
     <>
       <Backdrop open={open} onClick={() => setOpen(false)}></Backdrop>
       <div
-        className={`z-[9999] ${
+        className={`z-[99] ${
           open ? "left-0" : "-left-full lg:left-0"
-        }  border-r-2 border-primary-border top-[88px] transition-all duration-300 fixed h-full w-[260px] p-4 text-white flex flex-col justify-between overflow-y-auto pb-20 bg-primary`}
+        }  border-r-2 border-primary-border top-[193px] md:top-[88px] transition-all duration-300 fixed h-full w-[260px] p-4 text-white flex flex-col justify-between overflow-y-auto pb-20 bg-primary`}
       >
         <div className="pb-10">
           <div className="mt-3 flex-1">

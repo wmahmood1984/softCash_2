@@ -5,165 +5,174 @@ const CreateToken = () => {
   return (
     <div className="text-[#B3B3B3] grid grid-cols-1 pb-20">
       <Banner />
-      <div className="mt-5 ">
-        <p className="mb-2">(*) is required field.</p>
+      <div className="lg:hidden my-10 text-center">
+        <p>This page is only available for desktop view</p>
       </div>
-      <div className="grid gap-4 grid-cols-1">
-        <CustomInput label={"Name"} />
-        <CustomInput label={"Symbol"} />
-        <CustomInput label={"Decimals"} />
-        <CustomInput label={"Total supply"} />
-        <CustomInput label={"Network / Chain"} />
-        <CustomInput label={"Router	"} />
-      </div>
-      <p className="mt-10 mb-4 text-2xl font-bold text-center">Tax Option</p>
-      <div className="grid grid-flow-col gap-2 justify-start items-center">
-        <CustomCheckBox checked />
-        <p className=" text-white font-semibold">
-          Select Your Required Buy Tax Options (Max 9% Total)
-        </p>
-      </div>
-      <div className="mt-3 grid grid-cols-1 gap-3">
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Auto Liquidity"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Auto Liquidity Wallet Address	"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Auto Buybac & Burn"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Auto Buyback Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Token Reflection"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomRadio label={"Select Token Reflection Method"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Marketing"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Marketing Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Staking Reward"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Staking Reward Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Team / Dev"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Team / Dev Wallet Address"} />
+      <div className="lg:block hidden">
+        <div className="mt-5 ">
+          <p className="mb-2">(*) is required field.</p>
+        </div>
+        <div className="grid gap-4 grid-cols-1">
+          <CustomInput label={"Name"} />
+          <CustomInput label={"Symbol"} />
+          <CustomInput label={"Decimals"} />
+          <CustomInput label={"Total supply"} />
+          <CustomInput label={"Network / Chain"} />
+          <CustomInput label={"Router	"} />
+        </div>
+        <p className="mt-10 mb-4 text-2xl font-bold text-center">Tax Option</p>
+        <div className="grid grid-flow-col gap-2 justify-start items-center">
+          <CustomCheckBox checked />
+          <p className=" text-white font-semibold">
+            Select Your Required Buy Tax Options (Max 9% Total)
+          </p>
+        </div>
+        <div className="mt-3 grid grid-cols-1 gap-3">
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Auto Liquidity"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Auto Liquidity Wallet Address	"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Auto Buyback Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Token Reflection"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomRadio label={"Select Token Reflection Method"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Marketing"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Marketing Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Staking Reward"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Staking Reward Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Team / Dev"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Team / Dev Wallet Address"} />
+            </div>
           </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <div className="grid grid-flow-col gap-2 justify-start items-center">
-        <CustomCheckBox checked />
-        <p className=" text-white font-semibold">
-          Select Your Required Sell Tax Options (Max 9% Total)
-        </p>
-      </div>
-      <div className="mt-3 grid grid-cols-1 gap-3">
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Auto Liquidity"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Auto Liquidity Wallet Address	"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Auto Buybac & Burn"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Auto Buyback Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Token Reflection"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomRadio label={"Select Token Reflection Method"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Marketing"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Marketing Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Staking Reward"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Staking Reward Wallet Address"} />
-          </div>
-        </div>{" "}
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Team / Dev"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Team / Dev Wallet Address"} />
+        <br />
+        <br />
+        <div className="grid grid-flow-col gap-2 justify-start items-center">
+          <CustomCheckBox checked />
+          <p className=" text-white font-semibold">
+            Select Your Required Sell Tax Options (Max 9% Total)
+          </p>
+        </div>
+        <div className="mt-3 grid grid-cols-1 gap-3">
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Auto Liquidity"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Auto Liquidity Wallet Address	"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Auto Buyback Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Token Reflection"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomRadio label={"Select Token Reflection Method"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Marketing"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Marketing Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Staking Reward"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Staking Reward Wallet Address"} />
+            </div>
+          </div>{" "}
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Team / Dev"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Team / Dev Wallet Address"} />
+            </div>
           </div>
         </div>
-      </div>
 
-      <br />
-      <div className="grid grid-flow-col gap-2 justify-start items-center mt-4">
-        <CustomCheckBox checked />
-        <p className=" text-white font-semibold">Transfer TAX (Max 2% Total)</p>
+        <br />
+        <div className="grid grid-flow-col gap-2 justify-start items-center mt-4">
+          <CustomCheckBox checked />
+          <p className=" text-white font-semibold">
+            Transfer TAX (Max 2% Total)
+          </p>
+        </div>
+        <div className="mt-3 grid grid-cols-1 gap-3">
+          <div className="flex items-center justify-between">
+            <div className="grid grid-flow-col gap-2 justify-start">
+              <CustomCheckBox />
+              <CustomSelect label={"Send & Recieve"} />{" "}
+            </div>
+            <div className="flex-1 ml-2">
+              <CustomInput label={"Transfer TAX Reciever Wallet Address"} />
+            </div>
+          </div>{" "}
+        </div>
+        <div className="max-w-max mx-auto">
+          <button className="font-bold py-3 px-8 rounded-md text-lg bg-[#0E78CB] text-white mt-14 ">
+            Create New Token
+          </button>
+          <p className="text-white mx-auto mt-1">Fee: 1BNB</p>
+        </div>
       </div>
-      <div className="mt-3 grid grid-cols-1 gap-3">
-        <div className="flex items-center justify-between">
-          <div className="grid grid-flow-col gap-2 justify-start">
-            <CustomCheckBox />
-            <CustomSelect label={"Send & Recieve"} />{" "}
-          </div>
-          <div className="flex-1 ml-2">
-            <CustomInput label={"Transfer TAX Reciever Wallet Address"} />
-          </div>
-        </div>{" "}
-      </div>
-      <button className="font-bold py-3 px-8 rounded-md text-lg bg-[#0E78CB] text-white mt-14 max-w-max mx-auto">
-        Create New Token
-      </button>
-      <p className="text-white mx-auto mt-1">Fee: 1BNB</p>
     </div>
   );
 };

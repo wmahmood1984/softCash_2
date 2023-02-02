@@ -3,8 +3,8 @@ import { BiSearchAlt2 } from "react-icons/bi";
 
 const SearchBar = () => {
   return (
-    <div className="flex-1 mx-10">
-      <div className="max-w-[90%] relative text-white  overflow-hidden">
+    <div className="md:mx-10 ">
+      <div className=" max-w-[100%] md:max-w-[90%] relative text-white  overflow-hidden">
         <BiSearchAlt2 className=" absolute top-1/2 left-3 -translate-y-1/2 text-xl" />
         <input
           type="text"

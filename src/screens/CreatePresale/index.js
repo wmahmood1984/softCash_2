@@ -42,7 +42,7 @@ const CreatePresale = () => {
   return (
     <div className="grid grid-cols-1 text-[#B3B3B3]">
       <Banner />
-      <div className="my-20 ">
+      <div className="md:my-20 ">
         <div className=" hidden md:block">
           <CustomStepper step={step} />
         </div>

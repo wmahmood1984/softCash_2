@@ -12,6 +12,7 @@ import { TbBrandTelegram } from "react-icons/tb";
 
 import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
 import Tag from "../../LaunchPadList/components/Tag";
+import { shortAddress } from "../../../web3/helpers";
 
 const Left = () => {
   const social = [
@@ -55,8 +56,8 @@ const Left = () => {
     "flex justify-between items-center border-b border-[#132a4a] pb-2";
 
   return (
-    <div className="p-4">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="md:p-4">
+      <div className="grid md:grid-cols-2 gap-4">
         <div>
           <p className="text-[#2ADFF1] text-center">
             Recommended Rank Badges: 3/5
@@ -83,25 +84,32 @@ const Left = () => {
           </a>{" "}
         </div>
       </div>
-      <div className="flex items-center justify-start mt-10">
+      <div className="flex md:flex-row flex-col md:items-center justify-start mt-10">
         <div className="grid grid-flow-col gap-2 items-center">
           <img src="/assets/project_logo.png" className="w-24" alt="" />
           <p className="text-xl">Pure Wallet Fair Launch</p>
         </div>
-        <div className="grid grid-flow-col gap-2  justify-start mx-4">
+        <div className="grid grid-flow-col gap-2 md:my-0 my-4 justify-start mx-4">
           {action.map((val, i) => (
             <button key={val.link} className="text-2xl  " onClick={val.handler}>
               {val.icon}
             </button>
           ))}
         </div>
-        <Tag type={"ended"} />
+        <div className="max-w-max">
+          <Tag type={"ended"} />
+        </div>
       </div>
       <div className="mt-10 grid grid-cols-1 gap-3">
         <div className={`${textBoxClass}`}>
           <p>Presale Address</p>
-          <a className="text-primary-text " href="/">
-            0x2a34040aea4587312b209ecD88507E0b4A832266
+          <a className="text-primary-text block" href="/">
+            <p className="md:block hidden">
+              0x2a34040aea4587312b209ecD88507E0b4A832266
+            </p>
+            <p className=" md:hidden">
+              {shortAddress("0x2a34040aea4587312b209ecD88507E0b4A832266")}{" "}
+            </p>
           </a>
         </div>{" "}
         <div className={`${textBoxClass}`}>
@@ -119,7 +127,12 @@ const Left = () => {
         <div className={`${textBoxClass}`}>
           <p>Token Address</p>
           <a className="text-primary-text block" href="/">
-            <p>0x2a34040aea4587312b209ecD88507E0b4A832266</p>
+            <p className="md:block hidden">
+              0x2a34040aea4587312b209ecD88507E0b4A832266
+            </p>
+            <p className=" md:hidden text-right">
+              {shortAddress("0x2a34040aea4587312b209ecD88507E0b4A832266")}{" "}
+            </p>
             <p className="text-right">
               (Do not send BNB to the token address!)
             </p>
@@ -163,8 +176,8 @@ const Left = () => {
         </div>
       </div>
       <div>
-        <div className="mt-10 flex justify-between items-center">
-          <p className="text-2xl font-semibold">Description</p>
+        <div className="mt-10 flex flex-col md:flex-row  md:justify-between md:items-center">
+          <p className="text-2xl font-semibold mb-4 md:mb-0">Description</p>
           <div className="grid grid-flow-col gap-2  justify-start ">
             {social.map((val, i) => (
               <a

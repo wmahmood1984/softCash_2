@@ -36,7 +36,7 @@
     transform: translate(0, 0);
   }
   to {
-    transform: translate(calc(-65% + (185px)));
+    transform: translate(calc(-10% + (100px)));
   }
 }
 .disclaimer {
