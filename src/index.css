@@ -47,3 +47,25 @@
   text-align: center;
   background: black;
 }
+
+.btn_gradient {
+  background: rgb(17, 110, 211);
+  background: -moz-linear-gradient(
+    79deg,
+    rgba(17, 110, 211, 0.9585084033613446) 0%,
+    rgba(12, 45, 98, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    79deg,
+    rgba(17, 110, 211, 0.9585084033613446) 0%,
+    rgba(12, 45, 98, 1) 100%
+  );
+  background: linear-gradient(
+    79deg,
+    rgba(17, 110, 211, 0.9585084033613446) 0%,
+    rgba(12, 45, 98, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#116ed3",endColorstr="#0c2d62",GradientType=1);
+
+  border: 1px #0996df solid;
+}

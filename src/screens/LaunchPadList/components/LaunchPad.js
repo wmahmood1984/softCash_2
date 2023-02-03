@@ -4,7 +4,8 @@ import { FiFacebook, FiGlobe, FiInstagram, FiTwitter } from "react-icons/fi";
 import { TbBrandTelegram } from "react-icons/tb";
 import { HiBellAlert } from "react-icons/hi2";
 import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Button from "../../../components/Button";
 const LaunchPad = () => {
   const social = [
     {
@@ -143,12 +144,14 @@ const LaunchPad = () => {
         ))}
         <div className=" flex justify-between items-center mt-2 ">
           <p className="text-[#B3B3B3]">Sale Starts In: 04:09:21:15</p>
-          <Link
+          <Button
+            sm
+            link
             to={"/project_preview"}
             className="bg-[#07A0E3] py-2 px-4 rounded-full"
           >
             View
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

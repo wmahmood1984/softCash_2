@@ -12,7 +12,7 @@ const Header = ({ setOpen, open }) => {
     <div className=" fixed w-full bg-primary z-10">
       <div className="px-6 py-5 border-b border-b-gray-300 grid grid-cols-1 md:flex md:items-center justify-center md:justify-between">
         <Link to="/" className="">
-          <img src="/assets/logo.png" className="w-60" alt="" />
+          <img src="/assets/Logo2.png" className="w-60" alt="" />
         </Link>
         <div className="md:block hidden flex-1">
           <SearchBar />
@@ -41,7 +41,7 @@ const Header = ({ setOpen, open }) => {
               <p className="md:block hidden">BSC</p>
               <BiChevronDown className="text-xl md:block hidden" />
             </button>
-            <button className="md:bg-[#07A0E3] md:text-black text-xl md:text-sm md:px-3 py-1  ">
+            <button className="md:bg-[#0996df] md:text-white text-xl md:text-sm md:px-3 py-1  ">
               <span className="hidden md:block">Connect Wallet</span>
               <span className="md:hidden">
                 <IoWallet />

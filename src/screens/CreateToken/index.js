@@ -3,10 +3,10 @@ import React from "react";
 const CreateToken = () => {
   return (
     <div className="text-[#B3B3B3]  pb-20">
-      <div className="lg:hidden my-10 text-center">
+      {/* <div className="lg:hidden my-10 text-center">
         <p>This page is only available for desktop view</p>
-      </div>
-      <div className="lg:block hidden">
+      </div> */}
+      <div className="">
         <div className="mt-5 ">
           <p className="mb-2">(*) is required field.</p>
         </div>
@@ -26,57 +26,69 @@ const CreateToken = () => {
           </p>
         </div>
         <div className="mt-3 grid grid-cols-1 gap-3">
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Auto Liquidity"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Auto Liquidity"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Auto Liquidity Wallet Address	"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+              <div className="ml-2 flex-1">
+                <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Auto Buyback Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Token Reflection"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Token Reflection"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomRadio label={"Select Token Reflection Method"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Marketing"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Marketing"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Marketing Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Staking Reward"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Staking Reward"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Staking Reward Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Team / Dev"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Team / Dev"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Team / Dev Wallet Address"} />
             </div>
           </div>
@@ -90,57 +102,75 @@ const CreateToken = () => {
           </p>
         </div>
         <div className="mt-3 grid grid-cols-1 gap-3">
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Auto Liquidity"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Auto Liquidity"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Auto Liquidity Wallet Address	"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Auto Buybac & Burn"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Auto Buyback Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
               <CustomCheckBox />
-              <CustomSelect label={"Token Reflection"} />{" "}
+              <div className=" flex-1 ml-2">
+                <CustomSelect label={"Token Reflection"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomRadio label={"Select Token Reflection Method"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
-              <CustomCheckBox />
-              <CustomSelect label={"Marketing"} />{" "}
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
+              <div>
+                <CustomCheckBox />
+              </div>
+              <div className=" flex-1 ml-2">
+                <CustomSelect label={"Marketing"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Marketing Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
-              <CustomCheckBox />
-              <CustomSelect label={"Staking Reward"} />{" "}
+          <div className=" grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
+              <div>
+                <CustomCheckBox />
+              </div>
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Staking Reward"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Staking Reward Wallet Address"} />
             </div>
           </div>{" "}
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
-              <CustomCheckBox />
-              <CustomSelect label={"Team / Dev"} />{" "}
+          <div className="grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
+              <div>
+                <CustomCheckBox />
+              </div>
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Team / Dev"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
+            <div className="flex-1 md:ml-2">
               <CustomInput label={"Team / Dev Wallet Address"} />
             </div>
           </div>
@@ -154,18 +184,22 @@ const CreateToken = () => {
           </p>
         </div>
         <div className="mt-3 grid grid-cols-1 gap-3">
-          <div className="flex items-center justify-between">
-            <div className="grid grid-flow-col gap-2 justify-start">
-              <CustomCheckBox />
-              <CustomSelect label={"Send & Recieve"} />{" "}
+          <div className=" grid grid-cols-1 gap-4 md:gap-0 md:flex items-center justify-between">
+            <div className="flex items-center">
+              <div>
+                <CustomCheckBox />
+              </div>
+              <div className="flex-1 ml-2">
+                <CustomSelect label={"Send & Recieve"} />{" "}
+              </div>
             </div>
-            <div className="flex-1 ml-2">
-              <CustomInput label={"Transfer TAX Reciever Wallet Address"} />
+            <div className="flex-1  md:ml-2">
+              <CustomInput label={"Transfer TAX Reciever Wallet "} />
             </div>
           </div>{" "}
         </div>
         <div className="max-w-max mx-auto">
-          <button className="font-bold py-3 px-8 rounded-md text-lg bg-[#0E78CB] text-white mt-14 ">
+          <button className="font-bold py-3 px-8 rounded-md text-lg btn_gradient text-white mt-14">
             Create New Token
           </button>
           <p className="text-white mx-auto mt-1">Fee: 1BNB</p>
@@ -180,7 +214,7 @@ export default CreateToken;
 const CustomInput = ({ label, ...props }) => {
   return (
     <div className="bg-[#303D4F] flex border rounded-lg overflow-hidden border-gray-400">
-      <div className="bg-[#303D4F] text-white px-2 py-2 border-r border-gray-400 rounded-l-lg font-semibold min-w-[280px]">
+      <div className="bg-[#303D4F] text-white px-2 py-2 border-r border-gray-400 rounded-l-lg font-semibold min-w-[120px] md:min-w-[280px] text-sm sm:text-base ">
         {label}
       </div>
       <input
@@ -194,11 +228,11 @@ const CustomInput = ({ label, ...props }) => {
 const CustomRadio = ({ label, ...props }) => {
   const list = ["BNB", "ETH", "USDT", "SOFT", "CAKE", "DOGE"];
   return (
-    <div className="bg-[#303D4F] flex border rounded-lg overflow-hidden border-gray-400 items-center">
-      <div className="bg-[#303D4F] text-white px-2 py-2 border-r border-gray-400 rounded-l-lg font-semibold min-w-[280px]">
+    <div className="bg-[#303D4F] flex flex-col md:flex-row border rounded-lg overflow-hidden border-gray-400 items-center">
+      <div className="bg-[#303D4F] text-white px-2 py-2 border-b md:border-b-0 md:border-r border-gray-400 md:rounded-l-lg font-semibold min-w-[120px] md:min-w-[280px] text-sm sm:text-base ">
         {label}
       </div>
-      <div className="grid grid-flow-col gap-2 ml-2">
+      <div className="grid grid-cols-3 p-2 md:grid-cols-none md:grid-flow-col gap-2 ml-2">
         {list.map((item, index) => (
           <div key={index}>
             <input
@@ -224,7 +258,7 @@ const CustomSelect = ({ label, ...props }) => {
   ];
   return (
     <div className="bg-[#303D4F] flex border rounded-lg overflow-hidden border-gray-400">
-      <div className="bg-[#303D4F] text-white px-2 py-2 border-r border-gray-400 rounded-l-lg font-semibold min-w-[280px]">
+      <div className="bg-[#303D4F] text-white px-2 py-2 border-r border-gray-400 rounded-l-lg font-semibold min-w-[80px] md:min-w-[280px] text-sm sm:text-base ">
         {label}
       </div>
       <select
