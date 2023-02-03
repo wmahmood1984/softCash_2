@@ -7,12 +7,14 @@ import { BiChevronDown } from "react-icons/bi";
 import { IoWallet } from "react-icons/io5";
 import { TfiMenu } from "react-icons/tfi";
 import { FaTimes } from "react-icons/fa";
+import Logo from "../Logo";
 const Header = ({ setOpen, open }) => {
   return (
     <div className=" fixed w-full bg-primary z-10">
       <div className="px-6 py-5 border-b border-b-gray-300 grid grid-cols-1 md:flex md:items-center justify-center md:justify-between">
         <Link to="/" className="">
-          <img src="/assets/Logo2.png" className="w-60" alt="" />
+          {/* <img src="/assets/Logo2.png" className="w-60" alt="" /> */}
+          <Logo />
         </Link>
         <div className="md:block hidden flex-1">
           <SearchBar />
