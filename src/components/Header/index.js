@@ -69,8 +69,8 @@ const Header = ({ setOpen, open }) => {
               className="bg-[#373632] p-1  grid grid-flow-col gap-2 items-center text-sm"
               onClick={handleOpen}
             >
-              <img src={currentChain.icon} alt="" className="w-4" />
-              <p className="md:block hidden">{currentChain.name}</p>
+              <img src={currentChain.icon} alt="" className="w-4 h-3" />
+              <p className="md:block hidden ">{currentChain.name}</p>
               <BiChevronDown className="text-xl md:block hidden" />
             </button>
             <button
