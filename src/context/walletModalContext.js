@@ -41,21 +41,21 @@ export const WalletModalProvider = ({ initialTheme, children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   const localProvider = window.localStorage.getItem(
-  //     "WEB3_REACT_CURRENT_PROVIDER"
-  //   );
+  useEffect(() => {
+    const localProvider = window.localStorage.getItem(
+      "WEB3_REACT_CURRENT_PROVIDER"
+    );
 
-  //   if (localProvider === "Metamask") {
-  //     connectWallet(injected, "Metamask");
-  //   } else if (localProvider === "WalletConnect") {
-  //     connectWallet(walletconnect, "WalletConnect");
-  //   } else if (localProvider === "CoinBase") {
-  //     connectWallet(CoinbaseWallet, "CoinBase");
-  //   }
+    if (localProvider === "Metamask") {
+      connectWallet(injected, "Metamask");
+    } else if (localProvider === "WalletConnect") {
+      connectWallet(walletconnect, "WalletConnect");
+    } else if (localProvider === "CoinBase") {
+      connectWallet(CoinbaseWallet, "CoinBase");
+    }
 
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const connectHandler = () => {
     if (!account) {
