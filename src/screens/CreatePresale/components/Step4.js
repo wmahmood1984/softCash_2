@@ -138,8 +138,8 @@ const Step4 = ({ increaseStep, decreaseStep }) => {
         accusantium?
       </p>
       <div className=" grid grid-flow-col gap-2 justify-center mt-10">
+        <Button onClick={decreaseStep}>Back</Button>
         <Button onClick={() => {}}>Crete</Button>
-        {/* <Button onClick={increaseStep}>Next</Button> */}
       </div>
     </>
   );

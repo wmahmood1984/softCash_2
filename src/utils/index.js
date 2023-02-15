@@ -1,5 +1,6 @@
 import {
   AiFillHome,
+  AiFillLock,
   AiFillQuestionCircle,
   AiOutlineLineChart,
 } from "react-icons/ai";
@@ -77,7 +78,21 @@ export const sidebarMenu = [
       },
     ],
   },
-
+  {
+    name: "Soft Lock",
+    to: "soft_lock",
+    icon: <AiFillLock />,
+    submenu: [
+      {
+        name: "Create Lock",
+        to: "/create_lock",
+      },
+      {
+        name: "Lock List",
+        to: "/lock_list",
+      },
+    ],
+  },
   {
     name: "View Chart",
     to: "/view_chart",

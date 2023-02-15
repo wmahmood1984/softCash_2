@@ -69,3 +69,7 @@
 
   border: 1px #0996df solid;
 }
+
+.list-item {
+  @apply flex justify-between items-center border-b border-[#132a4a] pb-2;
+}

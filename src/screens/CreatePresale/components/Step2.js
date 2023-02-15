@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Button from "../../../components/Button";
+import CustomInput2 from "../../../components/CustomInput2";
 
 const Step2 = ({ increaseStep, decreaseStep }) => {
   const [address, setAddress] = useState("");
@@ -33,7 +34,7 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
               </span>
             </p>
           </div>
-          <CustomInput
+          <CustomInput2
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             placeholder="234mknjknfgj453456jmngjf87485hjb435nn23k"
@@ -46,7 +47,7 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
               <span>You can enable/disable whitelist anytime</span>
             </p>
           </div>
-          <CustomInput
+          <CustomInput2
             placeholder="0"
             value={whitelist}
             onChange={(e) => setWhiteList(e.target.value)}
@@ -61,41 +62,41 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
               {"Softcap must be >= 50% of Hardcap!"}
             </p>
           </div>
-          <CustomInput
+          <CustomInput2
             placeholder="0"
             value={softCap}
             onChange={(e) => setSoftCap(e.target.value)}
           />
         </div>
-        <CustomInput
+        <CustomInput2
           required
           label="Hardcap (BNB)"
           value={hardCap}
           onChange={(e) => setHardCap(e.target.value)}
         />
-        <CustomInput
+        <CustomInput2
           required
           label="Minimun buy (BNB)"
           value={minBuy}
           onChange={(e) => setMinBuy(e.target.value)}
         />
-        <CustomInput
+        <CustomInput2
           required
           label="Maximum buy (BNB)"
           value={maxBuy}
           onChange={(e) => setMaxBuy(e.target.value)}
         />
-        <CustomInput
+        <CustomInput2
           label="Refund type"
           value={refundType}
           onChange={(e) => setRefundType(e.target.value)}
         />
-        <CustomInput
+        <CustomInput2
           label="Router"
           value={router}
           onChange={(e) => setRouter(e.target.value)}
         />
-        <CustomInput
+        <CustomInput2
           label="liquidity (%)"
           required
           value={liquidity}
@@ -108,7 +109,7 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
             </p>
             <p className=" text-primary-text text-sm ">{"1 BNB = 0 Rat"}</p>
           </div>
-          <CustomInput
+          <CustomInput2
             placeholder="0"
             value={listingRate}
             onChange={(e) => setListingRate(e.target.value)}
@@ -125,14 +126,14 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
       </p>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
         <div className="">
-          <CustomInput
+          <CustomInput2
             type="date"
             label={"Select start time & end time (UTC)"}
             required
           />
         </div>{" "}
         <div className="">
-          <CustomInput label={"Liquidity lockup (minutes)"} required />
+          <CustomInput2 label={"Liquidity lockup (minutes)"} required />
         </div>
         <div>
           <input type="checkbox" name="" id="vesting" className="mr-1" />
@@ -157,20 +158,3 @@ const Step2 = ({ increaseStep, decreaseStep }) => {
 };
 
 export default Step2;
-const CustomInput = ({ label, type = "text", required, ...props }) => {
-  return (
-    <div className="">
-      {label && (
-        <label>
-          {label} {required && <span className="text-red-400">*</span>}
-        </label>
-      )}
-      <input
-        {...props}
-        required={required}
-        type={type}
-        className="bg-[#303D4F] border flex-1 outline-none focus:ring-0 block w-full rounded-md "
-      />
-    </div>
-  );
-};
