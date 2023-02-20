@@ -7,9 +7,6 @@ const CreateLock = () => {
   const [useAnotherOwner, setUseAnotherOwner] = useState(false);
   return (
     <div className="mt-6 mb-10">
-      <div className="mb-6">
-        <p className=" text-lg font-semibold"> Create your lock</p>
-      </div>
       <div className="grid grid-cols-1 gap-4">
         <div>
           <CustomInput2
