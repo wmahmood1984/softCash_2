@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import { tokenLauncherAbi, tokenlauncherAdd } from "../../../../SOFT_CASH_FINANCE-main/SOFT_CASH_FINANCE-main/src/config";
+import { tokenLauncherAbi, tokenlauncherAdd } from "../../config.js";
 import { getContract } from "../../web3/helpers";
 
 const CreateToken = () => {
