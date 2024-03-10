@@ -1,6 +1,95 @@
-import React from "react";
+import { useWeb3React } from "@web3-react/core";
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import { tokenLauncherAbi, tokenlauncherAdd } from "../../../../SOFT_CASH_FINANCE-main/SOFT_CASH_FINANCE-main/src/config";
+import { getContract } from "../../web3/helpers";
 
 const CreateToken = () => {
+  const {chainId,library,account} = useWeb3React()
+  const [name,setName] = useState("abc ")
+  const [symbol,setSymbol] = useState("abc")
+  const [decimals,setDecimals] = useState(18)
+  const [totalSupply,setTotalSupply] = useState(1000000)
+  const [liquidity,setLiquidity] = useState(1)
+  const [lWallet,setLWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [bback,setBback] = useState(1)
+  const [bWallet,setBWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [reward,setReward] = useState(1)
+  const [rToken,setRToken] = useState("0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee")
+  const [marketing,setMarketing] = useState(1)
+  const [mWallet,setMWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [staking,setStaking] = useState(1)
+  const [sWallet,setsWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [dev,setDev] = useState(1)
+  const [dWallet,setdWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [sliquidity,setSliquidity] = useState(1)
+  const [sbback,setSBback] = useState(1)
+  const [sReflection,setsReflection] = useState(1)
+  const [sMarketing,setsMarketing] = useState(1)
+  const [sSTaking,setsSTaking] = useState(1)
+  const [sDev,setsDev] = useState(1)
+  const [transfer,setTransfer] = useState(1)
+  const [transferWallet,setTransferWallet] = useState("0xad1e5Db8BD24F732C39A3f32Cf16291ac3Bc2cC0")
+  const [router,setRouter] = useState("0xD99D1c33F9fC3444f8101754aBC46c52416550D1")
+  const contract = getContract(library,account,tokenLauncherAbi,tokenlauncherAdd[`${chainId}`])
+  const [open,setOpen] = useState()
+  const [buyTax,setBuyTax] = useState(0)
+  const [saleTax,setSaleTax] = useState(0)
+
+const _createToken = async ()=>{
+  setOpen(true)
+  console.log("data",[name,symbol],   //strings
+  [router
+    ,mWallet ? mWallet : "0x0000000000000000000000000000000000000000"
+    ,bWallet ? bWallet : "0x0000000000000000000000000000000000000000"
+    ,rToken? rToken : "0x0000000000000000000000000000000000000000"
+    ,dWallet? dWallet : "0x0000000000000000000000000000000000000000"
+    ,sWallet? sWallet : "0x0000000000000000000000000000000000000000"
+    ,transferWallet? transferWallet : "0x0000000000000000000000000000000000000000"
+    ,transferWallet? transferWallet : "0x0000000000000000000000000000000000000000"
+  ],   // addresses
+  [totalSupply,decimals,marketing,liquidity,bback,sbback,sMarketing,sliquidity,dev,sDev,staking,sSTaking,reward,sReflection,transfer
+
+  ])
+  try {
+    const tx1 = await contract.launchToken(
+      [name,symbol],   //strings
+      [router,mWallet,bWallet,rToken,dWallet,sWallet,transferWallet,account],   // addresses
+      [totalSupply,decimals,marketing,liquidity,bback,sbback,sMarketing,sliquidity,dev,sDev,staking,sSTaking,reward,sReflection,transfer
+
+      ],   // integers
+      {gasLimit:6000000}
+
+    )
+
+    const receipt = await tx1.wait()
+
+    if(receipt){
+      setOpen(false)
+    }
+  } catch (error) {
+    console.log("error in create token",error)
+    setOpen(false)
+  }
+}
+
+if(buyTax>9){
+  toast.error("Buy tax cannot be more than 9%")
+}
+
+if(saleTax>9){
+  toast.error("Sale tax cannot be more than 9%")
+}
+
+const [buyOptions,setBuyOptions] = useState([0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9,])
+const [saleOptions,setSaleOptions] = useState([0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9,])
+const [transferOptions,setTransferOptions] = useState([0, 0.5, 1, 1.5, 2])
+
+
+// console.log("buy",buyTax)
+// console.log("sale",saleTax)
+// console.log("liquidity",liquidity)
+
   return (
     <div className="text-[#B3B3B3]  pb-20">
       {/* <div className="lg:hidden my-10 text-center">
@@ -11,12 +100,12 @@ const CreateToken = () => {
           <p className="mb-2">(*) is required field.</p>
         </div>
         <div className="grid gap-4 grid-cols-1">
-          <CustomInput label={"Name"} />
-          <CustomInput label={"Symbol"} />
-          <CustomInput label={"Decimals"} />
-          <CustomInput label={"Total supply"} />
-          <CustomInput label={"Network / Chain"} />
-          <CustomInput label={"Router	"} />
+        <CustomInput placeholder="Example: BitCoin" value={name} setValue={setName} label={"Name"} />
+          <CustomInput placeholder="Example: BTC"value={symbol} setValue={setSymbol} label={"Symbol"} />
+          <CustomInput value={decimals} setValue={setDecimals} label={"Decimals"} />
+          <CustomInput value={totalSupply} setValue={setTotalSupply} label={"Total supply"} />
+          <CustomInput value={chainId == 97 ? "BNB" : "ETH"} label={"Network / Chain"} />
+          <CustomInput value={router} setValue={setRouter} label={"Router	"} />
         </div>
         <p className="mt-10 mb-4 text-2xl font-bold text-center">Tax Option</p>
         <div className="grid grid-flow-col gap-2 justify-start items-center">
